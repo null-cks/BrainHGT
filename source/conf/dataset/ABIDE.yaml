@@ -1,0 +1,12 @@
+name: abide
+batch_size: 32
+test_batch_size: 32
+val_batch_size: 32
+train_set: 0.7
+val_set: 0.1
+
+path: D:/dataset/ABIDE_I/ABIDE_pcp/cpac/filt_noglobal/cc200/NPY/abide_1009_omst.npy #493NC vs 516ASD
+
+stratified: True
+drop_last: False
+num_class: 2

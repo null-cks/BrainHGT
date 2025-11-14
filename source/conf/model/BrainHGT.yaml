@@ -1,0 +1,15 @@
+name: BrainHGT
+
+dim_hidden: 256
+num_heads: 8
+num_layers: 1
+dropout: 0.1
+dim_feedforward: 1024
+encoder_hidden_dim: 32
+num_communities: 8 #18
+dice_path: 'models/BrainHGT/dice/DICE_CPAC200_&_Yeo-7-liberal_res-1x1x1.csv'
+#dice_path: 'models/BrainHGT/dice/DICE_CPAC200_&_Yeo-17-liberal_res-1x1x1.csv'
+orthogonal: true
+freeze_center: true
+
+project: BrainHGT

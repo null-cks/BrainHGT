@@ -1,0 +1,17 @@
+defaults:
+  - dataset: ABIDE
+  - model: BrainHGT
+  - optimizer: adam
+  - training: basic_training
+  - datasz: 100p
+  - preprocess: non_mixup
+
+repeat_time: 10
+log_path: result
+best_model_path: save_model
+save_model: True
+
+# wandb
+wandb_entity: BrainGraphTransformer
+
+
