@@ -1,5 +1,5 @@
-# BrainHGT: A Hierarchical Graph Transformer for Interpretable Brain Network Analysis
-The official Pytorch implementation of paper "BrainHGT: A Hierarchical Graph Transformer for Interpretable Brain Network Analysis".
+# BrainHGT
+The official Pytorch implementation of paper "[BrainHGT: A Hierarchical Graph Transformer for Interpretable Brain Network Analysis](https://arxiv.org/abs/2511.17604)"**(AAAI-2026 poster)**.
 
 ## Abstract
 
@@ -12,9 +12,11 @@ The workflow starts with brain graph construction using the Orthogonal Minimal S
 ## Usage
 
 1. Update *path* in the file *source/conf/dataset/ABIDE.yaml* to the path of your dataset.
+- **[ABIDE I](http://fcon_1000.projects.nitrc.org/indi/abide/)**: For Autism Spectrum Disorder (ASD) research.
+- **[ADNI](https://adni.loni.usc.edu/)**: For Alzheimer's disease (AD) research.
 
 2. The model requires a pre-computed Dice similarity matrix as an anatomical prior. This matrix measures the spatial overlap between the ROIs in your dataset and a standard functional atlas, such as the Yeo 7-network atlas (Yeo et al. J Neurophysiol. 2011).
-- Generate the Matrix: Create the Dice matrix and save it as a *.csv* file(e.g., as *DICE_CPAC200_&_Yeo-7-liberal_res-1x1x1.csv*). For detailed generation methods, refer to Lawrence et al., "Standardizing human brain parcellations," Sci Data (2021).
+- Generate the Matrix: Create the Dice matrix and save it as a *.csv* file(e.g., as *DICE_CPAC200_&_Yeo-7-liberal_res-1x1x1.csv*). For detailed generation methods, refer to Lawrence et al., "[Standardizing human brain parcellations](https://www.nature.com/articles/s41597-021-00849-3)," Sci Data (2021).
 - Update Configuration: Change the *dice_path* attribute in the file *source/conf/model/BrainHGT.yaml* to the path of your generated prior matrix.
 
 3. Run the following command to train the model.
